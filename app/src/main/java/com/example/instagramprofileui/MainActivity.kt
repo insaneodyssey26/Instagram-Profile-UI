@@ -6,11 +6,15 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.KeyboardArrowDown
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -49,5 +53,15 @@ fun TopSection (
             fontSize = 22.sp,
         )
         Icon(Icons.Default.KeyboardArrowDown, contentDescription = "Dropdown")
+    }
+    Row (
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 40.dp, horizontal = 20.dp),
+        horizontalArrangement = Arrangement.End
+    ) {
+        Icon(Icons.Default.Add, contentDescription = "Add")
+        Spacer(modifier = Modifier.width(10.dp))
+        Icon(Icons.Default.Menu, contentDescription = "Menu")
     }
 }
