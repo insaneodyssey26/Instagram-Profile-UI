@@ -87,7 +87,8 @@ fun ProfileInfo (
             .fillMaxWidth()
             .padding(horizontal = 20.dp),
         verticalAlignment = Alignment.CenterVertically
-    ){
+    ) {
+        Column {
         Image(
             painter = painterResource(R.drawable.me),
             contentDescription = "Profile Image",
@@ -95,7 +96,20 @@ fun ProfileInfo (
                 .size(100.dp)
                 .clip(CircleShape)
         )
-        Spacer(modifier = Modifier.width(22.dp))
+        Spacer(modifier = Modifier.height(10.dp))
+        Text(
+            text = "Hidden in the Chaos",
+            fontSize = 15.sp
+        )
+            Text(
+                text = "................................."
+            )
+        Text(
+            text = "Under development",
+            fontSize = 15.sp
+        )
+    }
+        Spacer(modifier = Modifier.width(16.dp))
         Column {
             Text(
                 text = "Masum Ali",
@@ -122,10 +136,7 @@ fun ProfileInfo (
                     Text("144", fontWeight = FontWeight.Bold)
                     Text("following")
                 }
-
             }
         }
-
     }
-
 }
