@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -95,13 +96,36 @@ fun ProfileInfo (
                 .clip(CircleShape)
         )
         Spacer(modifier = Modifier.width(22.dp))
-        Text(
-            text = "Masum Ali",
-            fontWeight = FontWeight.Bold,
-            fontSize = 18.sp,
-            modifier = Modifier
-                .padding(bottom = 70.dp)
-        )
+        Column {
+            Text(
+                text = "Masum Ali",
+                fontWeight = FontWeight.Bold,
+                fontSize = 18.sp,
+            )
+            Spacer(modifier = Modifier.height(15.dp))
+            Row (
+                modifier = Modifier
+                    .fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceEvenly
+            ) {
+                Column (horizontalAlignment = Alignment.CenterHorizontally){
+                    Text("0", fontWeight = FontWeight.Bold)
+                    Text("posts")
+                }
+                Spacer(modifier = Modifier.width(30.dp))
+                Column (horizontalAlignment = Alignment.CenterHorizontally){
+                    Text("270", fontWeight = FontWeight.Bold)
+                    Text("followers")
+                }
+                Spacer(modifier = Modifier.width(30.dp))
+                Column (horizontalAlignment = Alignment.CenterHorizontally){
+                    Text("144", fontWeight = FontWeight.Bold)
+                    Text("following")
+                }
+
+            }
+        }
+
     }
 
 }
