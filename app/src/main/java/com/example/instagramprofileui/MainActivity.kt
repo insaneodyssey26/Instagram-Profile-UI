@@ -18,8 +18,11 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.Place
+import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -27,6 +30,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -108,8 +112,41 @@ fun ProfileInfo (
             text = "Under development",
             fontSize = 15.sp
         )
-    }
-        Spacer(modifier = Modifier.width(16.dp))
+            Row {
+                Icon(
+                    Icons.Default.Info, contentDescription = null,
+                    modifier = Modifier
+                        .size(15.dp)
+                    )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text(
+                    text = "masumali.me",
+                    color = Color.Blue
+                )
+            }
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Icon(
+                    Icons.Default.PlayArrow,
+                    contentDescription = null,
+                    modifier = Modifier.size(16.dp)
+                )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text(
+                    text = "aruarian dance",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 15.sp
+                )
+                Text(
+                    text = " • ",
+                    fontSize = 15.sp
+                )
+                Text(
+                    text = "Nujabes",
+                    fontSize = 15.sp
+                )
+            }
+
+            Spacer(modifier = Modifier.width(16.dp))
         Column {
             Text(
                 text = "Masum Ali",
